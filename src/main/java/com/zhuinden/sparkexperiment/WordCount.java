@@ -11,6 +11,7 @@ import org.apache.spark.sql.types.StructField;
 import org.apache.spark.sql.types.StructType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import scala.Tuple2;
 import scala.collection.JavaConversions;
@@ -32,7 +33,7 @@ import static org.apache.spark.sql.functions.col;
 public class WordCount {
     @Autowired
     private SparkSession sparkSession;
-
+    @Scheduled(fixedDelay = 10000)
     public List<Count> count() {
         String input = "hello world hello hello hello";
         String[] _words = input.split(" ");
