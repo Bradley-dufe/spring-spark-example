@@ -7,6 +7,9 @@ package com.zhuinden.sparkexperiment
   * update in 下午9:40 2018/4/19
   */
 object test {
+  def main: Unit ={
+    sayHello
+  }
   def sayHello: Unit ={
     println("hello")
   }

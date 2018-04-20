@@ -52,5 +52,6 @@ public class WordCount {
                 return new Count(row.getString(0), row.getLong(1));
             }
         }).collect(Collectors.toList());
+
     }
 }

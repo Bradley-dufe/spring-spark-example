@@ -51,6 +51,7 @@ public class ApplicationConfig {
                 .builder()
                 .sparkContext(javaSparkContext().sc())
                 .appName("Java Spark SQL basic example")
+                .enableHiveSupport()
                 .getOrCreate();
     }
 
