@@ -13,6 +13,7 @@ class test {
   def main(args: Array[String]): Unit ={
     for(i <- 1 to 100){
       Thread.sleep(2000)
+      sayHello
     }
   }
   def sayHello: Unit ={
