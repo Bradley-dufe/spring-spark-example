@@ -6,8 +6,8 @@ package com.zhuinden.sparkexperiment
   * Date: Create in 下午9:40 2018/4/19
   * update in 下午9:40 2018/4/19
   */
-//object test {
-//  def sayHello: Unit ={
-//    println("hello")
-//  }
-//}
+object test {
+  def sayHello: Unit ={
+    println("hello")
+  }
+}
