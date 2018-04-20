@@ -33,8 +33,9 @@ import static org.apache.spark.sql.functions.col;
 public class WordCount {
     @Autowired
     private SparkSession sparkSession;
-    @Scheduled(fixedDelay = 10000)
+    @Scheduled(fixedDelay = 5000)
     public List<Count> count() {
+        sparkSession.sparkContext().setLogLevel("ERROR");
         String input = "hello world hello hello hello";
         String[] _words = input.split(" ");
         List<Word> words = Arrays.stream(_words).map(Word::new).collect(Collectors.toList());
