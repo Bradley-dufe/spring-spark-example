@@ -33,9 +33,8 @@ public class ApplicationConfig {
     @Bean
     public SparkConf sparkConf() {
         SparkConf sparkConf = new SparkConf()
-                .setAppName(appName)
+                .setAppName(appName);
 //                .setSparkHome(sparkHome)
-                .setMaster(masterUri);
 
         return sparkConf;
     }
